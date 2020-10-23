@@ -1,0 +1,23 @@
+$darkBar:#040404;
+$lightBar:#131313;
+$greyBar:#282828;
+$white:#f9f9f9f9;
+
+.app{
+    height: calc(100vh - 10px);
+    background-color: $lightBar;
+    display: flex;
+}
+
+.navBar{
+    width: 250px;
+    height: 100%;
+    background-color: $darkBar;
+    .logo{
+        padding: 1.3rem 3rem;
+        color: $white;
+        svg{
+            max-width: 130px;
+        }
+    }
+}

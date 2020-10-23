@@ -1,0 +1,88 @@
+$darkBar:#040404;
+$lightBar:#131313;
+$greyBar:#414040;
+$white:#f9f9f9f9;
+.navBar{
+    height: calc(100vh - 10px);
+    padding: 10px;
+    background-color: $darkBar;
+    overflow: hidden;
+    .logo{
+        color: $white;
+        width: 150px;      
+    };
+    ul{
+        margin-top: 10px;
+        a{
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 0.5rem;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size:1.2rem;
+            display: flex;
+            transition: 0.7 ease-in-out; 
+            &:hover{
+                color: $white;
+                background-color: $greyBar;
+            };
+        li{
+            list-style: none;
+            color: $white;
+            svg{
+                margin-right: 0.5rem;
+                fill: currentColor;
+            }
+        }
+        }
+    }
+    .cookies{
+        font-size: 0.6rem;
+        color: $greyBar;
+        text-align: center;
+        margin-top: auto;
+        span{
+            display: block;
+        }
+    }
+}
+.create_list{
+    color: $white;
+    .scroll_playList{
+        overflow-y: scroll;
+        height: 100px;
+    }
+    .craeteFile{
+       display: flex;
+       flex-direction: column;
+       padding: 0.5rem;
+       .button_group_for_create_file{
+           display: flex;
+           flex-direction: row;
+       }
+      
+    }
+    .create_list_span{
+        display: flex;
+        flex-direction: row; 
+        margin-top: 5px; 
+        padding: 1rem;
+        border-radius: 10px;
+        &:hover{
+            background-color: $greyBar;
+        }
+       
+        svg{
+            fill: $white;
+            width: 25px;
+            
+        }
+        p{
+            margin-left: 10px;
+        }
+       
+    }
+}
+.active{
+    background-color: $greyBar;
+};

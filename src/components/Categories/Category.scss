@@ -1,0 +1,12 @@
+$lightBar:#131313;
+.mainContent{
+    color: white;
+    padding: 0.5rem 2rem;
+    background-color: $lightBar;
+    h1{
+        font-size: 1.5rem;
+    }
+    .cardsWrap{
+    padding-bottom: 1.8rem;
+    }
+}

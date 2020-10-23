@@ -1,0 +1,17 @@
+$greyBar:#4e4c4c;
+.search_show_item_track{
+    margin-top: 10px;
+    border-bottom: 1px solid $greyBar;
+    padding-bottom: 10px;
+    .track_intro_img{
+        width:400px;
+        height: 400px;
+    }
+
+@media(max-width:700px){
+    .track_intro_img{
+        width: 280px;
+        height: 280px;
+    }
+}
+}

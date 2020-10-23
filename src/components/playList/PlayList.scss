@@ -1,0 +1,57 @@
+$greyBar:#4e4c4c;
+.PlayListPage{
+    padding-bottom: 5rem;
+    .playListInfo{
+        padding: 1rem;
+        .small{
+            padding-bottom: 2rem;
+            font-weight: 400;
+            position: relative;
+            top: 30px;
+        }
+    h1{
+        font-size: 4rem;
+    }
+    span{
+        padding: 1rem;
+    }
+    .playListPageImage{
+        width: 220px;
+        margin: auto;
+        height: 220px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+     }
+    }
+    .pageListSongs{
+        margin: 10px auto;
+    }
+}
+.icons{
+    margin-top: 10px;
+    .playButon{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 0.4rem;
+        background-color: green !important;
+        position: relative;
+        margin-left: 10px;
+        svg{
+            z-index: 2;
+            margin: auto;
+        }
+    }
+    .Bots{
+        margin-left: 20px;
+        span{
+            width: 8px;
+            border-radius: 2px;
+            height: 8px;
+            background-color:$greyBar;
+        };
+    }
+}

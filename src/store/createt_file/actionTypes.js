@@ -1,0 +1,3 @@
+export const SET_NAME_FILE="SET_NAME_FILE";
+export const REMOVE_NAME_FILE="REMOVE_NAME_FILE";
+export const GET_CHOOSE_FILE="GET_CHOOSE_FILE";

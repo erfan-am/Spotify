@@ -1,0 +1,17 @@
+$darkBar:#040404;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: $darkBar;
+    min-height: 100%;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

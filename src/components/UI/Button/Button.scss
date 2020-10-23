@@ -1,0 +1,14 @@
+.button_component{
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 2px;
+    font-weight: bold;
+    &:hover{
+        background-color: #333;
+        color: wheat;
+    }
+}

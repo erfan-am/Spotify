@@ -1,0 +1,18 @@
+$white:#f9f9f9f9;
+.box{
+    margin-top: 20px;
+    margin-right: 50px;
+    .path{
+        height: 4px;
+        width: 100%;
+        background-color: $white;
+    }
+    .play{
+        right: 30%;
+        margin-top: 20px;
+        .svg{
+            fill: $white;
+            width: 50px;
+        }
+     }
+}

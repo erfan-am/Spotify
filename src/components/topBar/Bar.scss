@@ -1,0 +1,18 @@
+$greyNav:#090909;
+$greyBar:#282828;
+$white:#f9f9f9f9;
+.upperNav{
+    background-color: $greyNav;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    .authentication{
+        a{
+            padding: 10px 18px ;
+            background-color: $greyBar;
+            color: $white;
+            border-radius: 10px;
+            margin:10px ;
+        }
+    }
+}

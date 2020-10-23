@@ -1,0 +1,35 @@
+.create_file_page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 1rem;
+
+    .img_feild{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        form{
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            button{
+                padding: 16px 14px;
+                background-color: #333;
+                outline: none;
+                border: none;
+                margin-left: 3px;
+                margin-top: 10px;
+                color: white;
+            }
+        }
+        img{
+            width:60%;
+            height: 300px;
+            margin: 10px auto;
+        }
+    }
+    
+}
