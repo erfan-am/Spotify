@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import "./Nav.scss";
 import {
-  createFile,
-  removeFile,
+  deleteFetchfiles,
   getChooseFile,
+  getFetchfiles,
+  postFetchfiles,
 } from "../../store/createt_file/function";
 import Input from "../UI/Input/Input";
 import Button from "../UI/Button/Button";
 import Flex from "../UI/Flex/Flex";
-const Nav = ({ createFile, files, removeFile, getChooseFile }) => {
+const Nav = ({
+  getFetchfiles,
+  files,
+  deleteFetchfiles,
+  getChooseFile,
+  postFetchfiles,
+}) => {
   const [showForm, setShoForm] = useState(false);
   const [fileName, setFileName] = useState("");
   const showFormCansel = () => {
@@ -18,11 +25,14 @@ const Nav = ({ createFile, files, removeFile, getChooseFile }) => {
   };
   const createFileHandler = () => {
     if (fileName !== "") {
-      createFile(fileName);
+      postFetchfiles(fileName);
       setShoForm(false);
       setFileName("");
     }
   };
+  useEffect(() => {
+    getFetchfiles();
+  }, [files]);
   return (
     <Flex dir="column" width="280px" className="navBar">
       <div className="logo">
@@ -71,7 +81,7 @@ const Nav = ({ createFile, files, removeFile, getChooseFile }) => {
             Search
           </li>
         </NavLink>
-        <NavLink to="/" exact>
+        <NavLink to="/l" exact>
           <li>
             <svg
               viewBox="0 0 512 512"
@@ -100,7 +110,12 @@ const Nav = ({ createFile, files, removeFile, getChooseFile }) => {
           <p>Create Playlist</p>
         </li>
         {showForm ? (
-          <form onSubmit={createFileHandler} className="craeteFile">
+          <form
+            method="POST"
+            action="/playlists/file"
+            onSubmit={createFileHandler}
+            className="craeteFile"
+          >
             <Input
               element="input"
               value={fileName}
@@ -135,7 +150,7 @@ const Nav = ({ createFile, files, removeFile, getChooseFile }) => {
                 <Link to={`/:yourname/fileplaylist/${file.name}`}>
                   <h3 onClick={() => getChooseFile(file)}>{file.name}</h3>
                 </Link>
-                <span onClick={() => removeFile(file)}>del</span>
+                <span onClick={() => deleteFetchfiles(file)}>del</span>
               </Flex>
             ))}
           </div>
@@ -170,7 +185,8 @@ const mapStateToProps = (state) => ({
   files: state.file.files,
 });
 export default connect(mapStateToProps, {
-  createFile,
-  removeFile,
+  deleteFetchfiles,
   getChooseFile,
+  getFetchfiles,
+  postFetchfiles,
 })(Nav);

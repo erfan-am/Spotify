@@ -1,11 +1,12 @@
 import * as actionTypes from "./actonTypes";
+let URL = "http://localhost/api";
 
 export const getFetchDataSongs = () => {
   return (dispatch) => {
     dispatch({
       type: actionTypes.GET_FETCH_API_SONGS_START,
     });
-    fetch("http://localhost:4000/api/songs")
+    fetch(URL + "/songs")
       .then((res) => res.json())
       .then((data) =>
         dispatch({
